@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet  author="daniel.vidal"  id="daniel.vidal-151022-001">  
+        <createTable  tableName="TBL_User">  
+            <column  name="cd_id"  type="int"  autoIncrement="true">
+                <constraints primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="cd_username"  type="VARCHAR(30)">
+            </column>
+            <column  name="cd_email"  type="VARCHAR(100)">
+            </column>
+            <column  name="nb_name"  type="VARCHAR(100)">
+            </column>
+            <column  name="nb_lastname"  type="VARCHAR(100)">
+            </column>
+        </createTable>
+		<createTable  tableName="TBL_Role">  
+            <column  name="cd_id"  type="int"  autoIncrement="true">
+                <constraints primaryKey="true"  nullable="false"/>
+            </column>
+            <column  name="nb_name"  type="VARCHAR(30)">
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
