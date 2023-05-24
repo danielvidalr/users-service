@@ -1,0 +1,16 @@
+on: [push]
+jobs:
+  test-liquibase-action:
+    runs-on: ubuntu-latest
+    name: Test Liquibase Action
+    steps:
+      - uses: actions/checkout@v2
+      - uses: liquibase/liquibase-github-action@v2
+        with:
+          operation: 'update'
+          classpath: 'database/changesets'
+          changeLogFile: 'data.sql'
+          username: demoadmin
+          password: D3M0ax1ty!23#
+          url: jdbc:sqlserver://;serverName=sql-axity-devsecops-dev.database.windows.net;databaseName=demo
+          
